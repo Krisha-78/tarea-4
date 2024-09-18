@@ -1,0 +1,75 @@
+.contenedor{ /*padre*/
+    background-color: chartreuse;
+    padding: 10px;
+    font-size: 25px;
+    display: grid;
+    grid-gap: 5px;
+    text-align: center;
+    /*grid-template-columns: 100px 100px ;
+    grid-template-rows: 100px 150px 150px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 5fr 2fr;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(9, 1fr);*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 7fr 1fr;
+    grid-template-areas: "cabecera cabecera cabecera"
+                         "Menu     Menu     Menu"
+                         "contenido contenido public"
+                         "pie      pie      pie";
+
+}
+.contenedor>div{
+    background-color: cyan;
+    
+}
+.contenedor .cabecera{
+    background-color: coral;
+    grid-column: cabecera;
+}
+.contenedor .Menu{
+background-color: gold;
+grid-column: Menu;
+}
+.contenedor .contenido {
+    background-color: greenyellow;
+    grid-column: contenido;
+    display: flex;
+    flex-direction: column; 
+    
+}
+.tarj{
+    display: flex;
+    justify-content: space-between;
+}
+.texto {
+    margin-bottom: 20px; 
+}
+.contenedor .contenido .cajas1{
+    background-color: lime;
+    padding: 15px;
+    margin: 10px;
+    width: 45%;
+}
+.contenedor .contenido .cajas3{
+    background-color: lime;
+    padding: 15px;
+    margin: 10px;
+    width: 45%;
+}
+.contenedor .public .cajas2{
+    background-color:yellow;
+    padding: 10px;
+    margin: 10px;
+}
+.contenedor .public {
+    background-color:peru;
+    grid-column: public;
+}
+.contenedor .pie{
+    background-color: darkgreen;
+    grid-column: pie;
+    text-align: right;
+}
